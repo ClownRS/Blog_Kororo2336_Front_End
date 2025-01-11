@@ -7,17 +7,28 @@
     <link rel="stylesheet" href="./css/template.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Simplified+Chinese">
+    <script src="./js/templateFunc.js"></script>
 </head>
 <body>
     <div id="top">
         <span id="title">Kokoro's Blog</span>
         <span id="nav">
-            <button class="top_button"><p class="button_content">首页</p></button>     <!--此处交由js处理链接跳转-->    
-            <button class="top_button"><p class="button_content">文章</p></button>
-            <button class="top_button"><p class="button_content">标签</p></button>
-            <button class="top_button"><p class="button_content">关于</p></button>
+            <button class="nav_button" id="homePage"><p class="button_content">首页</p></button>     <!--此处交由js处理链接跳转-->    
+            <button class="nav_button" id="posts"><p class="button_content">文章</p></button>
+            <button class="nav_button" id="tags"><p class="button_content">标签</p></button>
+            <button class="nav_button" id="about"><p class="button_content">关于</p></button>
         </span>
+        <button id="night_mode">
+            test
+        </button>
     </div>
     <iframe src="home.html" id="hello"></iframe>   <!--内嵌首页框架-->
+    <script>
+        const button = document.getElementById("homePage");
+
+        button.addEventListener("click", function() {
+            window.location.href = 'http://127.0.0.1:5500/template.html';   /*页面跳转*/
+        })
+    </script>
 </body>
 </html>

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/home.css">
+    <!--导入marked以解析markdown-->
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>    
     <style>
         iframe {    /*设置内嵌框架*/
             width: 100vw;    /*设置满屏*/
@@ -15,16 +17,36 @@
 </head>
 <body>
     <div id="hello">Kokoro dayo~</div>
-    <div id="Intro">
+    <div id="Intro" class="blocks">
         <p id="Intro_word">
             <p id="Intro_word_title">Welcome to my blog!</p>
             <hr>
-            我在这里发布帖子，内容涉及到：<br>
-            <ul>
-                <ui>技术向帖子</ui><br>
-                <ui>生活向帖子</ui>
-            </ul>
+            <p id="Intro_word_content">
+                <script>
+                    /*此部分Intro应当从数据库加载并解析，在学习后端以后再进行编写*/
+                </script>
+            </p>
         </p>
+    </div>
+    <div id="posts_display_homePage" class="blocks">
+        <div class="post_display">
+            <h3 class="post_title">测试</h3>
+        </div>
+        <div class="post_display">
+            <h3 class="post_title">测试</h3>
+        </div>
+        <div class="post_display">
+            <h3 class="post_title">测试</h3>
+        </div>
+        <div class="post_display">
+            <h3 class="post_title">测试</h3>
+        </div>
+        <div class="post_display">
+            <h3 class="post_title">测试</h3>
+        </div>
+        <div class="post_display">
+            <h3 class="post_title">测试</h3>
+        </div>
     </div>
 </body>
 </html>

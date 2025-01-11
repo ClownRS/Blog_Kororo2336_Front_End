@@ -19,7 +19,7 @@ iframe {    /*设置内嵌框架*/
     height: 100vh;
 }
 
-button {
+.nav_button {
     color: rgb(0, 0, 0);
     font-size:x-large;
     border: none;
@@ -29,21 +29,22 @@ button {
     background-color: transparent;
     border-radius: 10px;    /*添加圆角*/
     width: 7vw;
+    height: 5vh;
     box-shadow: 
         3px 3px 5px -2px rgb(131, 113, 121),
         2px 1.5px 3px -2px rgb(26, 26, 26),
         -2px -2px 5px -1px rgb(248, 230, 238),
         -1px -1px 3px -1px rgb(251, 234, 246)
         ;
-    transition: transform 0.3s ease, background-color 0.1s ease-out;
+    transition: transform 0.3s ease, background-color 0.05s ease-out;
 }
 
-button:hover {
+.nav_button:hover {
     background-color: rgb(209, 182, 194);
     transform: scale(1.05);
 }
 
-button:active {
+.nav_button:active {
     background-color: rgb(255, 227, 233);
     box-shadow: 
         inset 2px 2px 3px -2px rgb(126, 109, 116),
@@ -55,7 +56,9 @@ button:active {
 #top {
     display: flex;
     background-color: rgb(249, 215, 230);
+    width: 100vw;
     justify-content: space-around;  
+    align-items: center;
     border-width: 0 0 0 1px;    
     text-align: center;
     padding: 20px;
@@ -85,6 +88,20 @@ button:active {
     justify-content: space-between;
     align-content: center;
 }
+
+#night_mode {
+    width: 50px;
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(252, 241, 250);
+    box-shadow: 
+        3px 3px 5px -2px rgb(131, 113, 121),
+        2px 1.5px 3px -2px rgb(26, 26, 26),
+        -2px -2px 5px -1px rgb(248, 230, 238),
+        -1px -1px 3px -1px rgb(251, 234, 246);
+}
+
 
 #link {
     display: flex;

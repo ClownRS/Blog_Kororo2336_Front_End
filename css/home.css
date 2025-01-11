@@ -18,8 +18,8 @@ hr {    /*设置下划线样式*/
     border-radius: 1px;
 }
 
-
-
+ul {    /*设置列表样式*/
+}
 
 #hello {
     width: 100vw;
@@ -45,7 +45,7 @@ hr {    /*设置下划线样式*/
     }
 }
 
-#Intro {
+.blocks {
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -53,9 +53,12 @@ hr {    /*设置下划线样式*/
     top: 40vh;
     width: 90vw;
     height: fit-content;
-    text-align: center;
     backdrop-filter: blur(50px);
     animation: slideInFromBottom 1.5s ease;
+}
+
+#Intro {
+    width: 50vw;
 }
 
 #Intro_word {
@@ -66,7 +69,51 @@ hr {    /*设置下划线样式*/
 }
 
 #Intro_word_title {
+    text-align: center;
     font-weight: 600;
     font-size: x-large;
 }
 
+#Intro_word_content {
+    text-align: left;
+    width: 50vw;
+    height: fit-content;
+    margin: auto;
+    background-color: rgb(215, 235, 244);
+    backdrop-filter: blur(80px);
+}
+
+#posts_display_homePage {
+    position:relative;
+    background-color: rgb(255, 237, 240);
+    top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: space-around;
+}
+
+.post_display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    border: 2px solid gray; 
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-left: 20px;
+}
+
+.post_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 30%;
+    font-size: x-large;
+
+}
