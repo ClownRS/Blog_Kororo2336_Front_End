@@ -11,7 +11,32 @@ body {
     background-attachment: fixed;   /*使背景固定，不随着滚动条移动*/
     height: 100%;
     font-family: 'Roboto Mono', 'Noto Sans Simplified Chinese';
-    text-shadow: 0.5px 0.5px 2px grey;
+}
+
+button {
+    color: rgb(0, 0, 0);
+    font-size:x-large;
+    border: none;
+    background-color: transparent;
+    border-radius: 10px;    /*添加圆角*/
+    width: 7vw;
+    box-shadow: 
+        3px 3px 3px -1px gray,
+        2px 2px 2px -1px rgb(26, 26, 26),
+        -2px -2px 5px -1px white,
+        -1px -1px 3px -1px white
+        ;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        inset 2px 2px 3px -2px gray,
+        inset 1px 1px 2px -2px rgb(26, 26, 26),
+        inset -1px -1px 5px -2px white,
+        inset 0px 0px 3px -2px white;
+        ;
 }
 
 #top {
@@ -37,7 +62,8 @@ body {
     width: 40%;
     position: relative;
     bottom: 4px;
-    left: 5px
+    left: 5px;
+    text-shadow: 0.5px 0.5px 2px gray;
 }
 
 #nav {
@@ -45,8 +71,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-content: center;
-    color: rgb(4, 44, 81);
-    font-size:x-large;
 }
 
 
@@ -62,7 +86,7 @@ a {
     -webkit-background-clip: text;
 }
 
-#blog_list {
+/* #blog_list {
     position: fixed;
     left: 0;
     top: 81px;
@@ -70,4 +94,4 @@ a {
     padding: 10%;
     box-shadow: 0.5px 5px 10px;
     /* backdrop-filter: blur(10px); */
-}
+/* } */ 
