@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/fufu.jpg);
+    background-size: cover; /*使图片尽可能覆盖整个页面*/
+    background-position: top;    /*使图片上对齐*/
+    background-attachment: fixed;   /*使背景固定，不随着滚动条移动*/
+    height: 100%;
+    font-family: 'Roboto Mono', 'Noto Sans Simplified Chinese';
+}
+
+iframe {    /*设置内嵌框架*/
+    border: none;
+    width: 100vw;
+    height: 100vh;
+}
+
+button {
+    color: rgb(0, 0, 0);
+    font-size:x-large;
+    border: none;
+    display:flex;
+    justify-content: center;    /*调整水平方向排列*/
+    align-items: center;    /*调整竖直方向排列*/
+    background-color: transparent;
+    border-radius: 10px;    /*添加圆角*/
+    width: 7vw;
+    box-shadow: 
+        3px 3px 5px -2px rgb(131, 113, 121),
+        2px 1.5px 3px -2px rgb(26, 26, 26),
+        -2px -2px 5px -1px rgb(248, 230, 238),
+        -1px -1px 3px -1px rgb(251, 234, 246)
+        ;
+    transition: transform 0.3s ease, background-color 0.1s ease-out;
+}
+
+button:hover {
+    background-color: rgb(209, 182, 194);
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: rgb(255, 227, 233);
+    box-shadow: 
+        inset 2px 2px 3px -2px rgb(126, 109, 116),
+        inset 1px 1px 2px -2px rgb(27, 25, 26),
+        inset -1px -1px 5px -3px rgb(253, 227, 238),
+        inset 0px 0px 3px -3px rgb(255, 216, 234);
+}
+
+#top {
+    display: flex;
+    background-color: rgb(249, 215, 230);
+    justify-content: space-around;  
+    border-width: 0 0 0 1px;    
+    text-align: center;
+    padding: 20px;
+    font-weight: bolder;
+    font-size: large;
+    box-shadow: 0px 1px 10px;
+    background-attachment: fixed;
+    z-index: 1000;  /*设置竖坐标，使顶栏位于所有元素上方*/
+}
+
+#title {
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: xx-large;
+    align-content: center;
+    color: rgb(76, 5, 117);
+    width: 40%;
+    position: relative;
+    bottom: 4px;
+    left: 5px;
+    text-shadow: 0.5px 0.5px 2px gray;
+}
+
+#nav {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+#link {
+    display: flex;
+    width: 20%;
+}
+
+a {
+    text-decoration: none;  /*去掉下划线*/
+    color: rgb(49, 61, 199);
+    background: linear-gradient(circle, rgb(113, 72, 5), rgb(70, 164, 252));
+    -webkit-background-clip: text;
+}
+
+.button_content {
+    color: transparent;
+    background: linear-gradient(-45deg, rgb(176, 79, 148), rgb(86, 19, 86));   /*设置渐变色，不是background-color.*/
+    -webkit-background-clip: text;
+}
+
+/* #blog_list {
+    position: fixed;
+    left: 0;
+    top: 81px;
+    bottom: 0;
+    padding: 10%;
+    box-shadow: 0.5px 5px 10px;
+    /* backdrop-filter: blur(10px); */
+/* } */ 
