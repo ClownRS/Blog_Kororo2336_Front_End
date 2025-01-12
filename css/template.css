@@ -92,14 +92,57 @@ iframe {    /*设置内嵌框架*/
 #night_mode {
     width: 50px;
     height: 25px;
-    border-radius: 10px;
+    border-radius: 20px;
     border: none;
     background-color: rgb(252, 241, 250);
     box-shadow: 
-        3px 3px 5px -2px rgb(131, 113, 121),
-        2px 1.5px 3px -2px rgb(26, 26, 26),
-        -2px -2px 5px -1px rgb(248, 230, 238),
-        -1px -1px 3px -1px rgb(251, 234, 246);
+        inset 0px 0px 5px -1.5px rgb(26, 26, 26),
+        inset 0px 0px 2px -1px gray;
+    transition: background-color 0.3s ease;
+}
+
+#night_mode:active {
+    background-color: rgb(88, 88, 88);
+    box-shadow: inset 0px 0px 5px 0px rgb(12, 12, 12);
+}
+
+@keyframes switchToNightMode{
+    from {
+        background-color: rgb(153, 225, 243);
+        translate: translateX(0);
+    } to {
+        background-color: rgb(96, 145, 156);
+        translate: translateX(100px);
+    }
+}
+
+@keyframes switchToDayMode {
+    from {
+        background-color: rgb(96, 145, 156);
+        translate: translateX(100px);
+    } to {
+        background-color: rgb(153, 225, 243);
+        translate: translateX(0);
+    }
+}
+
+#night_mode_button:active {
+    background-color: rgb(96, 145, 156);
+    animation: switchToNightMode 0.3s ease;
+}
+
+#night_mode_button {
+    display: inline-block;  /*记得设置为inline-block, 这样span才能调整大小*/
+    background-color: rgb(153, 225, 243);
+    border: none;
+    position: relative;
+    bottom: 0.5px;
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    margin: 4px;
+    box-shadow: 1px 1px 3px rgb(26, 26, 26);
+    animation: switchToNightMode-reverse;
 }
 
 
