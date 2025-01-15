@@ -25,18 +25,18 @@
                 const night_mode_block = document.getElementById('night_mode');
 
                 night_mode_block.addEventListener('click', function() {
-                    night_mode_button.classList.toggle('active');
+                    night_mode.classList.toggle('active');
                     night_mode_button.classList.toggle('active');
                 });
             </script>
         </span>
     </div>
     <iframe src="home.html" id="hello"></iframe>   <!--内嵌首页框架-->
-    <script>
+    <script>    
         const button = document.getElementById("homePage");
 
         button.addEventListener("click", function() {
-            window.location.href = 'http://127.0.0.1:5500/template.html';   /*页面跳转*/
+            window.location.assign('http://127.0.0.1:5500/template.html');   /*页面跳转*/
         })
     </script>
 </body>

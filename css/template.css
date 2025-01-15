@@ -9,7 +9,7 @@ body {
     background-size: cover; /*使图片尽可能覆盖整个页面*/
     background-position: top;    /*使图片上对齐*/
     background-attachment: fixed;   /*使背景固定，不随着滚动条移动*/
-    height: 100%;
+    height: fit-content;
     font-family: 'Roboto Mono', 'Noto Sans Simplified Chinese';
 }
 
@@ -106,29 +106,9 @@ iframe {    /*设置内嵌框架*/
     box-shadow: inset 0px 0px 5px 0px rgb(12, 12, 12);
 }
 
-@keyframes switchToNightMode{
-    from {
-        background-color: rgb(153, 225, 243);
-        translate: translateX(0);
-    } to {
-        background-color: rgb(96, 145, 156);
-        translate: translateX(100px);
-    }
-}
-
-@keyframes switchToDayMode {
-    from {
-        background-color: rgb(96, 145, 156);
-        translate: translateX(100px);
-    } to {
-        background-color: rgb(153, 225, 243);
-        translate: translateX(0);
-    }
-}
-
 #night_mode_button:active {
     background-color: rgb(96, 145, 156);
-    animation: switchToNightMode 0.3s ease;
+    translate: translateX(100px);
 }
 
 #night_mode_button {
@@ -142,7 +122,7 @@ iframe {    /*设置内嵌框架*/
     border-radius: 18px;
     margin: 4px;
     box-shadow: 1px 1px 3px rgb(26, 26, 26);
-    animation: switchToNightMode-reverse;
+    transition: translate 0.3s ease, background-color 0.3s ease;
 }
 
 
