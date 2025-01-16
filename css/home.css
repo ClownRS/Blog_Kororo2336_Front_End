@@ -13,6 +13,11 @@ html {
 
 body {
     width: fit-content;
+    font-family: 'Roboto Mono', 'Noto Sans Simplified Chinese';
+}
+
+::-webkit-scrollbar {   /*使用伪类选择器实现滚动效果，但隐藏滚动条*/
+    display: none;
 }
 
 ul {    
@@ -161,4 +166,5 @@ ul {    /*设置列表样式*/
     overflow-wrap: break-word;  /*允许溢出时单词换行*/
     white-space: normal;
     text-align: left;
+    white-space: normal;
 }

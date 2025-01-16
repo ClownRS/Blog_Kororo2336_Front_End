@@ -11,6 +11,11 @@ body {
     background-attachment: fixed;   /*使背景固定，不随着滚动条移动*/
     height: fit-content;
     font-family: 'Roboto Mono', 'Noto Sans Simplified Chinese';
+    overflow-x: hidden; /*设置水平方向溢出时不显示滚动条*/
+}
+
+::-webkit-scrollbar {   /*使用伪类选择器实现滚动效果，但隐藏滚动条*/
+    display: none;
 }
 
 iframe {    /*设置内嵌框架*/
